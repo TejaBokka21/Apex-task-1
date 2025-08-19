@@ -1,16 +1,14 @@
-function showMessage() {
-  alert("🎉 Thanks for clicking the button!");
+// Dark/Light mode toggle
+function toggleMode() {
+  document.body.classList.toggle("dark-mode");
 }
 
-function submitForm() {
-  const name = document.getElementById("nameInput").value;
-  if (name.trim() === "") {
-    alert("Please enter your name.");
+// Dynamic button text change
+function changeText(button) {
+  if (button.innerText === "Click Me!") {
+    button.innerText = "🎉 You Clicked Me!";
+    alert("Hello! You just clicked the button 🚀");
   } else {
-    alert(`Welcome, ${name}! Thanks for subscribing.`);
+    button.innerText = "Click Me!";
   }
 }
-
-document.getElementById("toggle-theme").addEventListener("click", function () {
-  document.body.classList.toggle("dark-mode");
-});
